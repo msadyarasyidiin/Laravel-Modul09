@@ -1,0 +1,214 @@
+//bootstrap
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+//portfolio-rasyid
+html {
+    scroll-padding-top: 80px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+body.portfolio-page {
+    --ink: #1b2430;
+    --muted: #5b6470;
+    --paper: #ffffff;
+    --wash: #f3f4f6;
+    --accent: #c8102e;
+
+    --bs-body-font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+}
+
+.portfolio-page a {
+    color: inherit;
+}
+
+.portfolio-page :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+
+// ======================================
+// NAVBAR
+// ======================================
+
+.portfolio-page .navbar {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+}
+
+.portfolio-page .navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-page .nav-link {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.portfolio-page .nav-link:hover {
+    color: var(--accent);
+}
+
+
+// ======================================
+// HOME / HERO
+// ======================================
+
+.portfolio-page .hero-title {
+    font-size: clamp(3.2rem, 9vw, 7rem);
+    font-weight: 800;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.portfolio-page .hero-photo {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.portfolio-page .lead-text {
+    color: var(--muted);
+    font-size: 1.2rem;
+    max-width: 30em;
+}
+
+
+// ======================================
+// SECTION TITLE
+// ======================================
+
+.portfolio-page .section-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight: 750;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+}
+
+
+// ======================================
+// ABOUT
+// ======================================
+
+.portfolio-page .about-section {
+    background: var(--wash);
+}
+
+.portfolio-page .facts dt {
+    font-weight: 600;
+}
+
+.portfolio-page .facts dd {
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+
+// ======================================
+// PROJECTS
+// ======================================
+
+.portfolio-page .project .frame {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #e9eaec;
+}
+
+.portfolio-page .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-page .project-image-mclaren {
+    object-position: left center;
+}
+
+.portfolio-page .project img.project-image-contain {
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.portfolio-page .project .title-link {
+    text-decoration: none;
+}
+
+.portfolio-page .project:hover .title-link {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 6px;
+}
+
+.portfolio-page .stack {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+
+// ======================================
+// BUTTONS
+// ======================================
+
+.portfolio-page .btn {
+    border-radius: 100px;
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+}
+
+.portfolio-page .btn-ink {
+    background: var(--ink);
+    color: #ffffff;
+    border-color: var(--ink);
+}
+
+.portfolio-page .btn-ink:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+}
+
+
+// ======================================
+// CONTACT DAN FOOTER
+// ======================================
+
+.portfolio-page .contact {
+    background: var(--ink);
+    color: #ffffff;
+}
+
+.portfolio-page .contact .muted {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.portfolio-page .contact-lead {
+    max-width: 32em;
+}
+
+
+// ======================================
+// RESPONSIVE
+// ======================================
+
+@media (max-width: 991px) {
+    .portfolio-page .hero-photo {
+        height: 420px;
+    }
+}
